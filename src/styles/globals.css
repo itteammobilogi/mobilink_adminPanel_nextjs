@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Hides the scrollbar for the carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  scrollbar-width: none; /* For Firefox */
+}
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-fade-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.option-field{
+  color: #000; 
+  background-color: #f8fafc; 
+  font-weight: 500; 
+  padding: 8px;
+}
+option:hover {
+  background-color: #fde68a; 
+}
+
+
+
+
+
+/* 2nd one animation  */
+/* 
+@keyframes fadeInOut {
+  0%, 20% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  25%, 75% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80%, 100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.dynamic-gradient {
+  background: linear-gradient(76deg, #82c17a 10%, #d2c999 80.51%);
+  background-size: 200% 200%;
+  animation: gradientAnimation 8s ease infinite;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-color: #ff7a00;
+}
+
+.wave-divider {
+  margin-top: 2rem;
+} */
+
+
+
+/* 3rd one animation */
+
+
+/* @keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+
+svg {
+  display: block;
+} */
+
+
+/* 4th one */
+
+
+/* @keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+} */
+
+
+
+/* 6th one  */
+
+/* @keyframes backgroundAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes waveAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+} */
+
+
+
+
+/* orignal one  */
+
