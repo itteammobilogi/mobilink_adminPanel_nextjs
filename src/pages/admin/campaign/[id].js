@@ -5,7 +5,7 @@ export async function getServerSideProps(context) {
   const { id } = context.params;
 
   const res = await fetch(
-    `http://localhost:8080/api/admin/campaign/single/campaign/${id}`
+    `https://apimobilink.mobilogi.com/api/admin/campaign/single/campaign/${id}`
   );
   const result = await res.json();
 
@@ -60,7 +60,7 @@ const CampaignDetail = () => {
     try {
       // Send POST request to create a new publisher
       const response = await fetch(
-        "http://localhost:8080/api/admin/publisher/create/publisher",
+        "https://apimobilink.mobilogi.com/api/admin/publisher/create/publisher",
         {
           method: "POST",
           headers: {
@@ -129,7 +129,7 @@ const CampaignDetail = () => {
       try {
         const response = await fetch(
           // `http://localhost:8080/api/admin/campaign/single/campaign?id=${id}`
-          `http://localhost:8080/api/admin/campaign/single/campaign/${id}`
+          `https://apimobilink.mobilogi.com/api/admin/campaign/single/campaign/${id}`
         );
         const result = await response.json();
 
@@ -364,7 +364,7 @@ const CampaignDetail = () => {
               name: campaign.campaignName,
               description: `Exclusive affiliate campaign offering up to ${campaign.campaignPayout}% per sale.`,
               image: campaign.image
-                ? `http://localhost:8080/uploads/${campaign.image}`
+                ? `https://apimobilink.mobilogi.com/uploads/${campaign.image}`
                 : "fallback-image-path",
               url: `https://yourdomain.com/campaign/${campaign.id}`,
               price: `${campaign.campaignPayout}% Per Sale`,
@@ -392,7 +392,7 @@ const CampaignDetail = () => {
           <img
             src={
               campaign.image
-                ? `http://localhost:8080${
+                ? `https://apimobilink.mobilogi.com${
                     campaign.image.startsWith("/")
                       ? campaign.image
                       : `/${campaign.image}`

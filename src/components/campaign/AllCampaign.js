@@ -289,7 +289,7 @@ const AllCampaigns = () => {
 
     try {
       const response = await axios.get(
-        "http://localhost:8080/api/admin/campaign/getall/campaigns",
+        "https://apimobilink.mobilogi.com/api/admin/campaign/getall/campaigns",
         {
           params: {
             search: searchTerm || undefined,
@@ -419,7 +419,7 @@ const AllCampaigns = () => {
                         <img
                           src={
                             campaign.image
-                              ? `http://localhost:8080${
+                              ? `https://apimobilink.mobilogi.com${
                                   campaign.image.startsWith("/")
                                     ? campaign.image
                                     : `/${campaign.image}`

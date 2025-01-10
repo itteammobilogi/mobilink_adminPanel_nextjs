@@ -216,7 +216,7 @@
 
 export async function getServerSideProps() {
   const res = await fetch(
-    "http://localhost:8080/api/admin/campaign/getall/campaigns"
+    "https://apimobilink.mobilogi.com/api/admin/campaign/getall/campaigns"
   );
   const result = await res.json();
 
@@ -248,7 +248,7 @@ const PreferredCampaigns = () => {
     const fetchCampaigns = async () => {
       try {
         const response = await fetch(
-          "http://localhost:8080/api/admin/campaign/getall/campaigns"
+          "https://apimobilink.mobilogi.com/api/admin/campaign/getall/campaigns"
         );
         const result = await response.json();
         if (response.ok) {
@@ -318,7 +318,7 @@ const PreferredCampaigns = () => {
     name: campaign.campaignName,
     description: `Exclusive affiliate campaign offering up to ${campaign.campaignPayout}% per sale.`,
     image: campaign.image
-      ? `http://localhost:8080${campaign.image}`
+      ? `https://apimobilink.mobilogi.com${campaign.image}`
       : "https://via.placeholder.com/150", // Use a valid fallback image URL
     url: `/admin/campaign/${campaign._id}`,
     price: `${campaign.campaignPayout}% Per Sale`,
@@ -387,7 +387,7 @@ const PreferredCampaigns = () => {
                   <motion.img
                     src={
                       campaign.image
-                        ? `http://localhost:8080${
+                        ? `https://apimobilink.mobilogi.com${
                             campaign.image.startsWith("/")
                               ? campaign.image
                               : `/${campaign.image}`
